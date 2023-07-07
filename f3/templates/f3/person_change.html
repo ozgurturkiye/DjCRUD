@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>F3 Person Form</title>
+</head>
+<body>
+<h1>F3 Person Change Form</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
