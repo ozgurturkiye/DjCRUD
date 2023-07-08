@@ -43,7 +43,7 @@ Anyone who want to learn different paradigm approach about writing view in Djang
 
 ### Executing program
 
-* This is a web application you just need web browser to use program.
+* To use the application, start by creating a Django Project with proper database.
 * A large screen tablet will make things a lot easier.
 ```
 code blocks for commands
