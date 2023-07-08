@@ -26,4 +26,6 @@ urlpatterns = [
     path("c1/", include("c1.urls")),
     path("c2/", include("c2.urls")),
     path("c3/", include("c3.urls")),
+    path("apis/1.0/", include("apis1.urls")),
+    path("apis/2.0/", include("apis2.urls")),
 ]
