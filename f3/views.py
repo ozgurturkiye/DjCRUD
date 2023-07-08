@@ -35,6 +35,8 @@ def person_add(request):
 def person_change(request, pk):
     person = get_object_or_404(Person, pk=pk)
     if request.method == "POST":
+        # Create a form to edit an existing Person, but use
+        # POST data to populate the form.
         form = PersonForm(request.POST, instance=person)
         if form.is_valid():
             form.save()

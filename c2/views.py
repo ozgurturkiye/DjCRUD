@@ -53,7 +53,10 @@ class PersonChangeView(TemplateView):
         return render(request, self.template_name, {"form": form})
 
     def post(self, request, *args, **kwargs):
-        form = self.form_class(request.POST)
+        person = get_object_or_404(Person, pk=self.kwargs["pk"])
+        # Create a form to edit an existing Person, but use
+        # POST data to populate the form.
+        form = self.form_class(request.POST, instance=person)
         if form.is_valid():
             person = form.save()
             return redirect("c2:person-detail", person.pk)
