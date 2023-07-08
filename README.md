@@ -14,19 +14,20 @@ Example:
 ## URL Patterns
 ```
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path("", include("coreapp.urls")),
-    path("f1/", include("f1.urls")),
-    path("f2/", include("f2.urls")),
-    path("f3/", include("f3.urls")),
-    path("c1/", include("c1.urls")),
-    path("c2/", include("c2.urls")),
-    path("c3/", include("c3.urls")),
-    path("apis/1.0/", include("apis1.urls")),
-    path("apis/2.0/", include("apis2.urls")),
-    path("apis/3.0/", include("apis3.urls")),
+    path("admin/", admin.site.urls),  #  Admin urls
+    path("", include("coreapp.urls")),  #  General link for other applications
+    path("f1/", include("f1.urls")),  #  Function Base 1(Bare metal - lack of validations and security)
+    path("f2/", include("f2.urls")),  #  Function Base 2(With forms.Forms)
+    path("f3/", include("f3.urls")),  #  Function Base 3(With ModelForm)
+    path("c1/", include("c1.urls")),  #  Class Base 1(With forms.Forms)
+    path("c2/", include("c2.urls")),  #  Class Base 2(With ModelForm)
+    path("c3/", include("c3.urls")),  #  Class Base 3(Generic Class Base View)
+    path("apis/1.0/", include("apis1.urls")),  #  API 1(Function Base Views)
+    path("apis/2.0/", include("apis2.urls")),  #  API 2(Class Base Views)
+    path("apis/3.0/", include("apis3.urls")),  #  API 3(Generic Class Base Views)
 ]
 ```
+
 ## Who need this project?
 
 Anyone who want to learn different paradigm approach about writing view in Django.
