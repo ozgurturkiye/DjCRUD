@@ -1,3 +1,4 @@
+# apis1 views.py
 from django.urls import reverse, reverse_lazy
 from rest_framework import status
 from rest_framework.decorators import api_view
@@ -10,7 +11,7 @@ from coreapp.models import Person
 @api_view(["GET"])
 def home(request):
     data = {
-        "person-list": request.build_absolute_uri(reverse("apis1:person-list")),
+        "person-list": request.build_absolute_uri(reverse("apis:person-list")),
         "person-detail": request.get_full_path() + "{lookup}/",
     }
     return Response(data)
