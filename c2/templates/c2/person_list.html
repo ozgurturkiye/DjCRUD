@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person List</title>
+</head>
+<body>
+<h1>F3 Person List</h1>
+<p><a href="{% url 'c2:person-add' %}">+Add Person</a></p>
+
+<ul>
+{% for person in person_list %}
+    <li><a href="{% url 'c2:person-detail' person.pk %}">{{ person.name }}</a> ...
+    <a href="{% url 'c2:person-change' person.pk %}">Change</a> |
+    <a href="{% url 'c2:person-delete' person.pk %}">Delete</a></li>
+{% empty %}
+    <li>Sorry, no persons in this list.</li>
+{% endfor %}
+</ul>
+</body>
+</html>
